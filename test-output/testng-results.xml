@@ -1,29 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="7494" started-at="2018-09-29T15:53:54Z" finished-at="2018-09-29T15:54:02Z">
+  <suite name="Default suite" duration-ms="5455" started-at="2018-09-30T08:24:50Z" finished-at="2018-09-30T08:24:56Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="7494" started-at="2018-09-29T15:53:54Z" finished-at="2018-09-29T15:54:02Z">
-      <class name="testcases.GETservicetest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:testcases.GETservicetest@167c1fc]" name="setup" is-config="true" duration-ms="28" started-at="2018-09-29T15:53:54Z" finished-at="2018-09-29T15:53:54Z">
+    <test name="Default test" duration-ms="5455" started-at="2018-09-30T08:24:50Z" finished-at="2018-09-30T08:24:56Z">
+      <class name="testcases.POSTservicetest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:testcases.POSTservicetest@be83e4]" name="setUp" is-config="true" duration-ms="27" started-at="2018-09-30T08:24:50Z" finished-at="2018-09-30T08:24:50Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="testGETapi()[pri:0, instance:testcases.GETservicetest@167c1fc]" name="testGETapi" duration-ms="6696" started-at="2018-09-29T15:53:54Z" finished-at="2018-09-29T15:54:01Z">
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testPostServices()[pri:0, instance:testcases.POSTservicetest@be83e4]" name="testPostServices" duration-ms="5295" started-at="2018-09-30T08:24:50Z" finished-at="2018-09-30T08:24:56Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testGETapi -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:testcases.GETservicetest@167c1fc]" name="setup" is-config="true" duration-ms="1" started-at="2018-09-29T15:54:01Z" finished-at="2018-09-29T15:54:01Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="testGETwithHeaderAddition()[pri:0, instance:testcases.GETservicetest@167c1fc]" name="testGETwithHeaderAddition" duration-ms="632" started-at="2018-09-29T15:54:01Z" finished-at="2018-09-29T15:54:02Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testGETwithHeaderAddition -->
-      </class> <!-- testcases.GETservicetest -->
+        </test-method> <!-- testPostServices -->
+      </class> <!-- testcases.POSTservicetest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
