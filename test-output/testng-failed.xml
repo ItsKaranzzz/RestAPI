@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testcases.POSTservicetest">
+      <class name="testcases.GETservicetest">
         <methods>
-          <include name="setUp"/>
-          <include name="testPostServices"/>
+          <include name="testGETwithHeaderAddition"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- testcases.POSTservicetest -->
+      </class> <!-- testcases.GETservicetest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

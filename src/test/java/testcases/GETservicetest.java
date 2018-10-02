@@ -64,12 +64,14 @@ public class GETservicetest extends BaseClass {
 	
 	@Test
 	public void testGETwithHeaderAddition() throws JSONException, ParseException, IOException {
-		CloseableHttpResponse clientResponse=oClient.getClientResponseWithoutHeader(uri);
-		//Validating the status
-		Assert.assertEquals(clientResponse.getStatusLine().getStatusCode(), repsonseCode_200);
-		//Adding Headers
+			//Adding Headers
 		HashMap<String, String> testheader=new HashMap<String, String>();
 		testheader.put("Content-type", "application/json");
+		CloseableHttpResponse clientResponse=oClient.getClientResponseWithHeader(uri,testheader);
+		//Validating the status
+		Assert.assertEquals(clientResponse.getStatusLine().getStatusCode(), repsonseCode_200);
+	
+		
 		JSONObject oJson=new JSONObject(EntityUtils.toString(clientResponse.getEntity(), "UTF-8"));
 		Assert.assertEquals(Integer.parseInt(Utilities.JSONparser(oJson, "/total")), 12);
 		Assert.assertEquals(Utilities.JSONparser(oJson, "/data[2]/last_name"), "Ramos");

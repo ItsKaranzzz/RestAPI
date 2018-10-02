@@ -37,7 +37,7 @@ public class ClientSetup {
 			throws ClientProtocolException, IOException {
 
 		CloseableHttpClient httpClient = HttpClients.createDefault();
-		HttpGet getAll = new HttpGet();
+		HttpGet getAll = new HttpGet(uri);
 		for (Entry<String, String> i : headers.entrySet()) {
 			getAll.addHeader(i.getKey(), i.getValue());
 		}
