@@ -10,6 +10,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import entities.Users;
+import entities.UsersJob;
 
 public class Utilities {
 
@@ -34,6 +35,16 @@ public class Utilities {
 	}
 
 	public static String marshelling(Users entity) throws JsonGenerationException, JsonMappingException, IOException {
+
+		// Marshelling
+		mapper = new ObjectMapper();
+
+		String oJsonString = mapper.writeValueAsString(entity);
+
+		return oJsonString;
+
+	}
+	public static String marshelling(UsersJob entity) throws JsonGenerationException, JsonMappingException, IOException {
 
 		// Marshelling
 		mapper = new ObjectMapper();

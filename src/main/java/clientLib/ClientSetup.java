@@ -7,14 +7,17 @@ import java.util.Map.Entry;
 import org.apache.http.Header;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpDelete;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.methods.HttpPut;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONObject;
 
+import entities.Users;
 import utils.Utilities;
 
 public class ClientSetup {
@@ -66,5 +69,29 @@ public class ClientSetup {
 		CloseableHttpResponse postResponse = client.execute(postToURI);
 		return postResponse;
 
+	}
+
+	// PUT operations on webservices
+
+	public static CloseableHttpResponse putClientResponse(String uri, String payload)
+			throws ClientProtocolException, IOException {
+
+		CloseableHttpClient client = HttpClients.createDefault();
+		HttpPut putReq = new HttpPut(uri);
+		putReq.setEntity(new StringEntity(Utilities.marshelling(new Users("Karan", "IT"))));
+		CloseableHttpResponse response = client.execute(putReq);
+
+		return response;
+
+	}
+	
+	public static CloseableHttpResponse deleteServiceTest(String uri) throws ClientProtocolException, IOException {
+
+		CloseableHttpClient client= HttpClients.createDefault();
+		HttpDelete deleteReq=new HttpDelete(uri);
+		
+		CloseableHttpResponse deleteResponse=client.execute(deleteReq);
+		return deleteResponse;
+		
 	}
 }

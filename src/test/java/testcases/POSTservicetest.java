@@ -40,6 +40,7 @@ public class POSTservicetest extends BaseClass {
 		Users expected=new Users("Karan", "Chaudhary");
 		HashMap<String, String> headers = new HashMap<String, String>();
 		headers.put("Content-type", "application/json");
+		System.out.println(Utilities.marshelling(expected));
 		CloseableHttpResponse response = ClientSetup.postClientResponse(Uri, Utilities.marshelling(expected), headers);
 		// Status Code validation
 		Assert.assertEquals(response.getStatusLine().getStatusCode(), repsonseCode_201);

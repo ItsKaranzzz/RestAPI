@@ -15,7 +15,7 @@ public class BaseClass {
 	public static int repsonseCode_400=400;
 	public static int repsonseCode_404=404;
 	public static int repsonseCode_405=405;
-	public static int repsonseCode_202=202;
+	public static int repsonseCode_204=204;
 	public static int repsonseCode_500=500;
 	
 
